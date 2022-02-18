@@ -1,0 +1,163 @@
+/*GENERAL*/
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.color {
+    color: #b94d18;
+}
+.hide {
+    display: none !important;
+}
+/* INFOS */
+.button_div {
+    text-align: center;
+    margin: 5% 0;
+}
+.button_div_2 {
+    text-align: right;
+    margin: 5% -15%;
+}
+#infos, #paiement {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+    width: 90%;
+    padding: 2%;
+    margin-left: 3%;
+}
+#perso h2 {
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+    padding: 2%;
+    width: 39%;
+    color: #b94d18;
+}
+#dates {
+    width: 90%;
+    padding: 1%;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+}
+#infos {
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 2%;
+
+}
+#infos h2 {
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+#infos ul li {
+    margin: 1% 0;
+}
+#dates {
+    margin-top: 2%;
+    text-align: center;
+}
+#registre {
+    font-size: 11px;
+}
+/* CLIENT */
+#client {
+    margin-top: 15%;
+    text-align: center;
+    font-size: 18px;
+}
+#dolleans {
+    font-size: 22px;
+}
+/* MOIS */
+#mois {
+    text-align: center;
+    font-size: 24px;
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 2%;
+    color: #b94d18;
+}
+/* DESIGNATION */
+#designation {
+    display: grid;
+    grid-template-columns: 3fr 1fr 1fr 1fr;
+    text-align: center;
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 2%;
+}
+/* TVA */
+#tva {
+    text-align: right;
+    margin-right: 5%;
+    margin-top: 2%;
+}
+/* PAIEMENT */
+#paiement {
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 2%;
+}
+#montant {
+    text-align: right;
+    margin-right: 9%;
+}
+/* RIB */
+#rib {
+    margin-top: 10%;
+    margin-left: 3%;
+    border-radius: 5px;
+    border: 2px solid #bccbde;
+}
+/* DESCRIPTION */
+#description {
+    border: 2px solid #bccbde;
+    border-radius: 10px;
+    width: 90%;
+    margin-top: 2%;
+    margin-left: 3%;
+    padding: 2%;
+}
+/* FORMULAIRE */
+#formulaire {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    text-align: center;
+}
+#formulaire input, textarea {
+    margin: 1% 1%;
+    padding: 1%  3%;
+    font-size: 24px;
+    border: 5px solid #bccbde;
+    border-radius: 10px;
+    background-color: #fff;
+    color: #bccbde;
+}
+button, .button {
+padding: 1%  3%;
+font-size: 24px;
+border: 5px solid #bccbde;
+border-radius: 10px;
+background-color: #fff;
+color: #bccbde;
+}
+/* FOOTER */
+#footer {
+    text-align: center;
+}

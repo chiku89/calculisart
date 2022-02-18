@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcul'isart</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="manifest" href="serviceWorker/manifest.json">
+    <meta name="theme-color" content="white">
+    <link rel="shortcut icon" href="img/icons/icon-96x96.png" type="image/x-icon">
+</head>
+<body>
+    <div id="header">
+    </div>
+    <div id="main">
+        <div class="button_div">
+            <button onclick="hide_form()">AFFICHER LE FORMULAIRE</button>
+        </div>
+        <div id="formulaire" class="hide">
+                <div>
+                    <div>
+                        <label for="facture_numero_form">Numéro de Facture :</label><br>
+                        <input type="number" name="facture_numero_form" id="facture_numero_form">
+                    </div>
+                    <div>
+                        <label for="date_form">Date :</label><br>
+                        <input type="date" data-date-format="DD MMMM YYYY" name="date_form" id="date_form">
+                    </div>
+                    <div>
+                        <label for="echeance_form">Échéance :</label><br>
+                        <input type="date" name="echeance_form" id="echeance_form">
+                    </div>
+                    <div>
+                        <label for="mois_form">Mois :</label><br>
+                        <input type="text" name="mois_form" id="mois_form">
+                    </div>
+                </div>
+                <div>
+                    <div>
+                        <label for="quantite_form">Quantité (heures) :</label><br>
+                        <input type="number" name="quantite_form" id="quantite_form">
+                    </div>
+                    <div>
+                        <label for="total_prix_form">Prix Total :</label><br>
+                        <input type="number" name="total_prix_form" id="total_prix_form">
+                    </div>
+                    <div>
+                        <label for="description_form">Description des W.End :</label><br>
+                        <textarea name="description_form" id="description_form"></textarea>
+                    </div>
+                </div>
+                <div class="button_div_2">
+                    <button type="submit" onclick="enregistrer_form()">Enregistrer</button>
+                </div>
+        </div>
+        <div id="affichage">
+            <div id="infos">
+                <div id="perso">
+                    <h2>FACTURE N°<span id="affichage_numero_facture"></span></h2>
+                    <ul>
+                        <li><p>FONTAINE Gauthier</p></li>
+                        <li><p>13, rue de la fontaine st loup</p></li>
+                        <li><p>77510 Hondevilliers, FRANCE</p></li>
+                        <li><p>Portable : 06.80.60.12.76</p></li>
+                        <li><p>Mail : gauthier.fontaine@gmail.com</p></li>
+                        <li><p>SIRET : 534 148 382</p></li>
+                        <li><p id="registre"><i>Dispensé d’immatriculation au registre du commerce et des sociétés (RCS) et au répertoire des métiers (RM)</i></p></li>
+                    </ul>
+                </div>
+                <div id="pro">
+                    <div id="dates">
+                        <div id="date">
+                            <p>Date :</p>
+                            <p id="affichage_date"></p>
+                        </div>
+                        <div id="echeance">
+                            <p>Échéance :</p>
+                            <p id="affichage_echeance"></p>
+                        </div>
+                    </div>
+                    <ul id="client">
+                        <li id="dolleans">Cabinet DOLLEANS</li>
+                        <li>26, rue d'Armaillé</li>
+                        <li>75017 Paris, FRANCE</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="mois">
+                <p>Mois de <b><span id="affichage_mois"></span></b></p>
+            </div>
+            <div id="description">
+                <p>Déscription :</p><br>
+                <p id="affichage_description"></p>
+                <p>Total : <span id="affichage_description_total"></span>h</p>
+            </div>
+            <div id="designation">
+                <div>
+                    <p>Préstation SSIAP 2 Tour Corvisart (Heure)</p>
+                </div>
+                <div>
+                    <p>Quantité</p>
+                    <p id="affichage_quantite"></p>
+                </div>
+                <div>
+                    <p>Prix Unitaire</p>
+                    <p>16,00€</p>
+                </div>
+                <div>
+                    <p>Total</p>
+                    <p class="color"><b><span id="affichage_total"></span> €</b></p>
+                </div>
+            </div>
+            <p id="tva"><i>TVA non applicable, article 293B du Code Général des Impôts</i></p>
+            <div id="paiement">
+                <div id="paiement_infos">
+                    <ul>
+                        <li><p>Mode de paiement</p></li>
+                        <li><p>Conditions d'escompte : Pas d'escompte applicable</p></li>
+                        <li><p>Pénalité de retard : Toute facture non réglée à son échéance portera, de plein droit et sans mise en demeure préalable, un intérêt de retard au taux de l'intérêt légal en vigueur à compter de l'échéance</p></li>
+                        <li><p>Indemnités de recouvrement : Indemnité forfaitaire de 40 €</p></li>
+                    </ul>
+                </div>
+                <div id="montant">
+                    <ul>
+                        <li><p class="color">TOTAL NET : <span id="affichage_total_1"></span> €</p></li>
+                        <li><p>REMISE GLOBALE : 0,00 €</p></li>
+                        <li><p>FRAIS DE PORT : 0,00 €</p></li>
+                        <li><p class="color"><b>MONTANT TOTAL : <span id="affichage_total_2"></span> €</b></p></li>
+                        <li><p><b>DÉJA PAYÉ : 0,00€</b></p></li>
+                        <li><p class="color"><b>RESTE À PAYER : <span id="affichage_total_3"></span> €</b></p></li>
+                    </ul>
+                </div>
+            </div>
+            <img id="rib" src="img/rib.png" alt="rib" width="50%">
+        </div>
+    </div>
+    <div class="button_div">
+        <input class="button" type="button" value="Enregistrer PDF" onclick="pdf_save()">
+    </div>
+    <div id="footer">
+        <p>©Copyright Web120 - 2021</p>
+    </div>
+    <!-- Service Worker -->
+    <script src="serviceWorker/app.js"></script>
+    <script src="script/app.js"></script>
+    <script src="script/html2pdf.bundle.min.js"></script>
+</body>
+</html>
