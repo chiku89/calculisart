@@ -161,3 +161,33 @@ color: #bccbde;
 #footer {
     text-align: center;
 }
+
+@media screen and (max-width: 768px) {
+    /* Formulaire */
+    #formulaire {
+        grid-template-columns: 1fr;
+      }
+    /* Bouton */
+    .button_div_2 {
+        text-align: center;
+        margin: 5% 0;
+      }
+      #infos, #paiement {
+          grid-template-columns: 1fr;
+          text-align: center;
+      }
+      #infos h2 {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      #dates {
+          width: 100%;
+      }
+      #affichage {
+        text-align: center;
+      }
+      #rib {
+          width: 90%;
+          margin-left: 0;
+      }
+}
