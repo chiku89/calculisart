@@ -190,4 +190,9 @@ color: #bccbde;
           width: 90%;
           margin-left: 0;
       }
+      #montant {
+        text-align: center;
+        margin-right: 0;
+        margin-top: 10px;
+      }
 }
